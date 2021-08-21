@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish: hsl(234, 11%, 52%);
+    --Dark-Grayish: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish: hsl(237, 14%, 26%);
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+
+html{
+    Font-size: 18px;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.wrapper{
+    width: 90%;
+    margin: auto;
+}
+.header-section{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 30vh;
+    background-image: url("./images/bg-mobile-dark.jpg");
+    padding: 3rem 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header h1{
+    letter-spacing: 0.5rem;
+    color:var(--Very-Light-Gray);
+}
+.header img{
+    cursor: pointer;
+}
+.inputField{
+    margin-top: 2rem;
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    border-radius: 5px;
+}
+.inputField div{
+    padding: 1.2rem;
+    display: flex;
+}
+.inputField button , .inputField input{
+   border: none;
+   outline: none;
+   fill: none;
+   background-color: inherit/*var(--Very-Dark-Desaturated-Blue)*/;
+   cursor :pointer
+}
+.inputField button{
+    border-radius: 50%;
+    border: 1px solid var(--Dark-Grayish-Blue);
+    height: 25px;
+    width: 25px;
+    margin: 0 .5rem;
+}
+.inputField input{
+    width: 90%;
+}
+input{
+    font-size: 0.9rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Very-Light-Grayish-Blue);
+}
+.inputColorWhite {
+    color: var(--Very-Light-Grayish-Blue);
+}
+.inputColorBlack {
+    color:  var(--Dark-Grayish);
+}
+
+.tasks-section{
+    min-height: 70vh;
+    background-color: var(--Very-Dark-Blue);
+}
+
+
+#taskContent{
+    border-radius: 5px;
+}
+.taskContentBlackBg{
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
+.task-container{
+    position: relative;
+    top: -30px;
+}
+
+
+.taskItem{
+    border-bottom: 1px solid var(--Dark-Grayish-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.taskItem p{
+    display: flex;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    color: var(--Very-Light-Grayish-Blue);
+    padding: 0 0.5rem;
+}
+
+.checkContainer{
+    border-radius: 50%;
+    border: 1px solid var(--Dark-Grayish-Blue);
+    height: 25px;
+    width: 25px;
+    margin-left: 0.4rem;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.fit-checker{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.checkContainer:hover{
+    border: 1px solid var(--Bright-Blue);
+    
+}
+.crossIcon{
+    cursor: pointer;
+    opacity: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.update-container{
+    display: flex;
+    flex-direction: column
+}
+.update{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.update, .history{
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
+
+
+.history{
+    border-radius: 5px;
+}
+
+
+.history ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.update h5{
+    color: var(--Dark-Grayish);
+}
+.history li {
+    padding: 0 1rem;
+    font-weight: 700;
+    color: var(--Dark-Grayish);
+    cursor: pointer;
+}
+
+#deleteTask{
+    cursor: pointer;
+}
+/*toggle class for light mode*/
+.whiteBg{
+    background-color: var(--Very-Light-Gray);
+}
+@media only screen and (max-width: 768px){
+    .history li{    
+       font-size: 1.2rem;
+    }
+    .update{
+        padding: 1.2rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+    .history{
+        position: absolute;
+        margin-top: 9rem;
+        top: auto;
+        left: 0;
+        right: 0;
+        padding: 1.2rem;
+        border-radius: 5px;
+    }
+}
+#allTask{
+    color: var(--Bright-Blue);
+}
+.whiteColor p{
+    color: var(--Dark-Grayish);
+}
+.blackColor p{
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+@media screen and (min-width: 768px){
+    .header-section{
+        background-image: url("./images/bg-desktop-dark.jpg");
+    }
+    .wrapper{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .update{
+        padding: 1.2rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}

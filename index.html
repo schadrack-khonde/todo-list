@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+  <section class="header-section" id="header_section">
+    <div class="wrapper">
+      <div class="header">
+        <h1>TODO</h1>
+        <img src="./images/icon-sun.svg" alt="sun-icon" id="darkmode">
+      </div>
+      <div class="inputField">
+        <div>
+          <button id='addTask'></button>
+          <input type="text" placeholder="Create a new todo..." id="inputTask">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tasks-section">
+    <div class="wrapper">
+      <div class="task-container">
+        <div id='taskContent' class="taskContentBlackBg">
+        </div>
+        <div id="update-container">
+          <div class="update">
+            <h5 id='countTodo'></h5>
+            <div class="history">
+              <ul>
+                <li id="allTask">All</li>
+                <li id="active">Active</li>
+                <li id="completed">Completed</li>
+              </ul>
+            </div>
+            <h5 id='deleteTask'> Clear Completed</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./darkmode.js"></script>
+ <script src="./app.js"></script>
+</body>
+</html>
